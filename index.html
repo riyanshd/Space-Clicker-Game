@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>Space Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--Full container for styles or just holding everything in place-->
+    <div id="container">
+      <h1 id="greeting">Welcome to Space Simulator!</h1>
+
+      <!--The black hole and stats and sell button -->
+      <div id="game-area">
+        <div class="black-hole-area">
+          <div class="basic-star" id="click-object"></div>
+
+          <div class="sell-section">
+            <div class="stats">
+              <p id="mass">Mass: 0.000</p>
+              <p id="energy">Energy: 0.000</p>
+            </div>
+            <button id="sell">SELL</button>
+          </div>
+        </div>
+
+        <!--Player upgrades-->
+        <div class="upgrades">
+          <button class="upgrade" id="up-one">
+            Increase Click Multiplier
+            <br />
+            <span class="extra-info">0.010 mass/click</span>
+            <br /><br />
+            <span class="cost">0.100 energy</span>
+            <br /><br />
+            <span class="numTimes">x0</span>
+          </button>
+
+          <button class="upgrade" id="up-two">
+            Increase Sell Multiplier
+            <br />
+            <span class="extra-info">0.100 energy/mass</span>
+            <br /><br />
+            <span class="cost">0.700 energy</span>
+            <br /><br />
+            <span class="numTimes">x0</span>
+          </button>
+
+          <button class="upgrade" id="up-three">
+            REBIRTH
+            <br />
+            <span class="extra-info">Basic Star</span>
+            <br /><br />
+            <span class="cost">100.000 energy</span>
+            <br /><br />
+            <span class="numTimes">x0</span>
+          </button>
+
+          <button class="upgrade" id="up-four">
+            Mass Collecter (Passive)
+            <br />
+            <span class="extra-info">0 auto-clicks/sec</span>
+            <br /><br />
+            <span class="cost">10.000 energy</span>
+            <br /><br />
+            <span class="numTimes">x0</span>
+          </button>
+        </div>
+      </div>
+
+      <!--Allows player to login using their username-->
+      <div id="login-section">
+        <p>Want to login? Username Here:</p>
+        <form
+          id="login"
+          onsubmit="
+            setUsername();
+            return false;
+          "
+        >
+          <input type="text" name="username" placeholder="Enter username..." />
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
